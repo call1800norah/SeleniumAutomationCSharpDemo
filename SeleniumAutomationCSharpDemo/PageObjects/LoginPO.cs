@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumAutomationCSharpDemo.PageObjects
 {
@@ -38,14 +33,5 @@ namespace SeleniumAutomationCSharpDemo.PageObjects
         public IWebElement RecentTransactions => driver.FindElement(By.XPath("//h6[@class='element-header' and normalize-space()= 'Recent Transactions']"));
         public ReadOnlyCollection<IWebElement> TableColumnHeaders => driver.FindElements(By.XPath("//table[@class='table table-padded']//thead//tr//th"));
         public IWebElement TableBody => driver.FindElement(By.XPath("//table[@class='table table-padded']//following::tbody"));
-
-
-
-
-
-
-
-
-
     }
 }

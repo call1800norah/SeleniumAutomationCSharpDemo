@@ -6,8 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumAutomationCSharpDemo
 {
@@ -65,6 +63,11 @@ namespace SeleniumAutomationCSharpDemo
             var isElementCollectionDisplayed = elementList.Where(e => e != null).Aggregate((first, second) => first.Displayed ? second : first);
             Assert.IsTrue(isElementCollectionDisplayed.Displayed, $"{nameof(isElementCollectionDisplayed)} was not displayed.");
         }
+        /// <summary>
+        ///  Verify a list of string is equal to a list of element text 
+        /// </summary>
+        /// <param name="stringElements"></param>
+        /// <param name="elements"></param>
         public void CompareWebElementsToStringList(List<string> stringElements, ReadOnlyCollection<IWebElement> elements)
         {
 

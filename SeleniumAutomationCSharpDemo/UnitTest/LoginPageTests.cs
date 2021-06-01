@@ -1,12 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using SeleniumAutomationCSharpDemo.PageObjects;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace SeleniumAutomationCSharpDemo.UnitTest
 {
@@ -14,6 +10,10 @@ namespace SeleniumAutomationCSharpDemo.UnitTest
     public class LoginPageTests : UnitTestBase
     {
         private LoginPO loginPO;
+
+        /// <summary>
+        /// Verify Login Page Loading and Sign In work
+        /// </summary>
         [TestMethod]
         public void LoginPageUnitTest()
         {
@@ -31,6 +31,10 @@ namespace SeleniumAutomationCSharpDemo.UnitTest
             Assert.IsTrue(loginPO.FinancialOvervieWholePage.Displayed, $"nameof{loginPO.FinancialOvervieWholePage}" +
                 $"was not displayed.");
         }
+
+        /// <summary>
+        /// Verify FinancialOverviewPage is displaying as expected
+        /// </summary>
         [TestMethod]
 
         public void FinancialOverviewPageUnitTests()
